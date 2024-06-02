@@ -30,6 +30,10 @@ library(car)
 crescimento1 <- read_excel("dados.xlsx") %>% 
   mutate(dose = as.factor(dose))
 
+str(crescimento1)
+
+summary(crescimento1)
+
 modelo1 <- aov (cres ~ inoc*dose, data = crescimento1)
 anova(modelo1)
 
